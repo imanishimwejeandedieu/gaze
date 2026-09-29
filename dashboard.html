@@ -1,56 +1,65 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Dashboard - Gaze</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="dashboard">
+    <div class="dashboard">
 
-    <aside class="sidebar">
-        <h2>My System</h2>
+        <aside class="sidebar">
+            <h2>GAZE</h2>
 
-        <a href="dashboard.html" class="active">Dashboard</a>
-        <a href="#">Users</a>
-        <a href="#">Settings</a>
-        <a href="login.html" class="logout">Logout</a>
-    </aside>
+            <nav>
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+            </nav>
 
-    <main class="main-content">
+            <a href="index.html" class="logout">Logout</a>
+        </aside>
 
-        <h1>Dashboard</h1>
-        <p class="welcome">Welcome to your dashboard!</p>
+        <main class="main-content">
 
-        <div class="cards">
+            <header>
+                <h1>Dashboard</h1>
+                <p>Welcome to your Gaze dashboard.</p>
+            </header>
 
-            <div class="dashboard-card">
-                <h3>Total Users</h3>
-                <p>120</p>
-            </div>
+            <section class="cards">
 
-            <div class="dashboard-card">
-                <h3>Active Users</h3>
-                <p>85</p>
-            </div>
+                <div class="dashboard-card">
+                    <h3>Users</h3>
+                    <p>120</p>
+                </div>
 
-            <div class="dashboard-card">
-                <h3>Projects</h3>
-                <p>15</p>
-            </div>
+                <div class="dashboard-card">
+                    <h3>Projects</h3>
+                    <p>25</p>
+                </div>
 
-            <div class="dashboard-card">
-                <h3>Messages</h3>
-                <p>32</p>
-            </div>
+                <div class="dashboard-card">
+                    <h3>Messages</h3>
+                    <p>48</p>
+                </div>
 
-        </div>
+            </section>
 
-    </main>
+            <section class="welcome-box">
+                <h2>Welcome!</h2>
+                <p>
+                    You have successfully logged in to your dashboard.
+                </p>
+            </section>
 
-</div>
+        </main>
+
+    </div>
 
 </body>
 </html>

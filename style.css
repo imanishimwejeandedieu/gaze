@@ -1,40 +1,37 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
+    font-family: Arial, sans-serif;
     background: #f4f6f8;
+    color: #222;
 }
 
 /* LOGIN AND REGISTER */
 
 .container {
-    width: 100%;
     min-height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background: #1f2937;
+    padding: 20px;
 }
 
 .card {
-    width: 400px;
-    padding: 35px;
-
+    width: 100%;
+    max-width: 420px;
     background: white;
+    padding: 35px;
     border-radius: 12px;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
 }
 
 .card h1 {
     text-align: center;
-    color: #1f2937;
     margin-bottom: 8px;
 }
 
@@ -44,47 +41,38 @@ body {
     margin-bottom: 25px;
 }
 
-.card label {
+form label {
     display: block;
     margin-bottom: 7px;
-    color: #333;
     font-weight: bold;
 }
 
-.card input {
+form input {
     width: 100%;
     padding: 12px;
-
     margin-bottom: 18px;
-
     border: 1px solid #ccc;
     border-radius: 6px;
-
     font-size: 15px;
 }
 
-.card input:focus {
-    border-color: #2563eb;
+form input:focus {
     outline: none;
+    border-color: #2563eb;
 }
 
-.card button {
+button {
     width: 100%;
     padding: 13px;
-
-    border: none;
-    border-radius: 6px;
-
     background: #2563eb;
     color: white;
-
+    border: none;
+    border-radius: 6px;
     font-size: 16px;
-    font-weight: bold;
-
     cursor: pointer;
 }
 
-.card button:hover {
+button:hover {
     background: #1d4ed8;
 }
 
@@ -100,7 +88,6 @@ body {
     font-weight: bold;
 }
 
-
 /* DASHBOARD */
 
 .dashboard {
@@ -108,88 +95,164 @@ body {
     min-height: 100vh;
 }
 
-/* SIDEBAR */
-
 .sidebar {
     width: 240px;
     background: #111827;
+    color: white;
     padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar h2 {
-    color: white;
     text-align: center;
     margin-bottom: 35px;
 }
 
-.sidebar a {
-    display: block;
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 
+.sidebar nav a {
     color: #d1d5db;
     text-decoration: none;
-
-    padding: 14px 18px;
-    margin-bottom: 8px;
-
+    padding: 12px 15px;
     border-radius: 6px;
 }
 
-.sidebar a:hover,
-.sidebar a.active {
+.sidebar nav a:hover,
+.sidebar nav .active {
     background: #2563eb;
     color: white;
 }
 
-.sidebar .logout {
-    margin-top: 40px;
+.logout {
+    margin-top: auto;
     background: #dc2626;
     color: white;
+    text-decoration: none;
+    padding: 12px;
+    text-align: center;
+    border-radius: 6px;
 }
-
-.sidebar .logout:hover {
-    background: #b91c1c;
-}
-
-/* MAIN CONTENT */
 
 .main-content {
     flex: 1;
-    padding: 40px;
+    padding: 35px;
 }
 
-.main-content h1 {
-    color: #111827;
-    margin-bottom: 8px;
-}
 
-.welcome {
-    color: #6b7280;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-content header {
     margin-bottom: 30px;
 }
 
-/* DASHBOARD CARDS */
+.main-content header h1 {
+    margin-bottom: 8px;
+}
+
+.main-content header p {
+    color: #666;
+}
 
 .cards {
     display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
 .dashboard-card {
     background: white;
-
     padding: 25px;
-
     border-radius: 10px;
-
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
 }
 
 .dashboard-card h3 {
-    color: #6b7280;
-    margin-bottom: 15px;
+    color: #666;
+    margin-bottom: 10px;
 }
 
 .dashboard-card p {
@@ -198,21 +261,16 @@ body {
     color: #2563eb;
 }
 
-
-/* RESPONSIVE */
-
-@media (max-width: 800px) {
-
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .sidebar {
-        width: 200px;
-    }
+.welcome-box {
+    background: white;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 10px;
 }
 
-@media (max-width: 600px) {
+/* MOBILE */
+
+@media (max-width: 700px) {
 
     .dashboard {
         flex-direction: column;
@@ -222,11 +280,21 @@ body {
         width: 100%;
     }
 
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar nav a {
+        flex: 1;
+        text-align: center;
+    }
+
     .cards {
         grid-template-columns: 1fr;
     }
 
-    .card {
-        width: 90%;
+    .main-content {
+        padding: 20px;
     }
 }
